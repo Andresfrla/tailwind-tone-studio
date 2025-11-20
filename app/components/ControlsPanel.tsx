@@ -15,6 +15,8 @@ type Props = {
   onHexChange: (value: string) => void;
   onRandom: () => void;
   onCopyPalette: (value: string) => void;
+  fontVar: string;
+  onFontChange: (value: string) => void;
 };
 
 export const ControlsPanel = ({
@@ -27,7 +29,22 @@ export const ControlsPanel = ({
   onHexChange,
   onRandom,
   onCopyPalette,
+  fontVar,
+  onFontChange,
 }: Props) => {
+  const fontOptions = [
+    { label: "Geist Sans", value: "--font-geist-sans" },
+    { label: "Poppins", value: "--font-poppins" },
+    { label: "Inter", value: "--font-inter" },
+    { label: "Lora", value: "--font-lora" },
+    { label: "Space Grotesk", value: "--font-space-grotesk" },
+    { label: "Manrope", value: "--font-manrope" },
+    { label: "DM Sans", value: "--font-dm-sans" },
+    { label: "Work Sans", value: "--font-work-sans" },
+    { label: "Nunito", value: "--font-nunito" },
+    { label: "Montserrat", value: "--font-montserrat" },
+  ];
+
   return (
     <SectionCard
       title="Base color"
@@ -58,6 +75,27 @@ export const ControlsPanel = ({
               Enter a valid HEX color (e.g. #22C55E or 16a34a).
             </span>
           ) : null}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-sm font-medium text-slate-700">
+            Fuente de la página
+          </label>
+          <div className="rounded-2xl border border-slate-200 bg-white px-3 py-2 shadow-inner shadow-slate-200/60">
+            <select
+              aria-label="Selector de fuente"
+              value={fontVar}
+              onChange={(event) => onFontChange(event.target.value)}
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 shadow-sm focus:border-slate-300 focus:outline-none"
+              style={{ fontFamily: `var(${fontVar}), system-ui, sans-serif` }}
+            >
+              {fontOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-3">

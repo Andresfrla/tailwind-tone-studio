@@ -28,6 +28,7 @@ export default function Home() {
   const [isValid, setIsValid] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [shadowIntensity, setShadowIntensity] = useState(1);
+  const [fontVar, setFontVar] = useState("--font-geist-sans");
 
   const palette = useMemo(() => buildPalette(activeHex), [activeHex]);
 
@@ -64,11 +65,14 @@ export default function Home() {
   const lightAccent = palette.find((p) => p.stop === 200)?.hex ?? activeHex;
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode
-        ? "bg-gradient-to-br from-gray-900 to-gray-800"
-        : "bg-gradient-to-br from-gray-50 to-gray-100"
-    }`}>
+    <div
+      className={`min-h-screen transition-colors duration-300 ${
+        isDarkMode
+          ? "bg-gradient-to-br from-gray-900 to-gray-800"
+          : "bg-gradient-to-br from-gray-50 to-gray-100"
+      }`}
+      style={{ fontFamily: `var(${fontVar}), var(--font-geist-sans), system-ui, sans-serif` }}
+    >
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-10">
         <ScrollReveal>
           <ColorHeader isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
@@ -86,6 +90,8 @@ export default function Home() {
               onHexChange={handleHexChange}
               onRandom={handleRandom}
               onCopyPalette={handleCopyHex}
+              fontVar={fontVar}
+              onFontChange={setFontVar}
             />
             <div className="space-y-5">
               <PaletteGrid
