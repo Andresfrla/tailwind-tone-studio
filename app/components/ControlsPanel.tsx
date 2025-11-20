@@ -79,7 +79,7 @@ export const ControlsPanel = ({
 
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-slate-700">
-            Fuente de la página
+            Page font
           </label>
           <div className="rounded-2xl border border-slate-200 bg-white px-3 py-2 shadow-inner shadow-slate-200/60">
             <select
