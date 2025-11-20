@@ -22,7 +22,6 @@ export function TypographyShowcase({ palette, shadowIntensity, onShadowChange }:
   const color50 = palette.find((p) => p.stop === 50)?.hex || "#f0fdf4";
   const color100 = palette.find((p) => p.stop === 100)?.hex || "#dcfce7";
   const color200 = palette.find((p) => p.stop === 200)?.hex || "#bbf7d0";
-  const color300 = palette.find((p) => p.stop === 300)?.hex || "#86efac";
   const color400 = palette.find((p) => p.stop === 400)?.hex || "#4ade80";
   const color500 = palette.find((p) => p.stop === 500)?.hex || "#22c55e";
   const color600 = palette.find((p) => p.stop === 600)?.hex || "#16a34a";
@@ -226,7 +225,9 @@ export function TypographyShowcase({ palette, shadowIntensity, onShadowChange }:
       </div>
 
       {/* Card 5: Search Interface */}
-      <div className={`overflow-hidden rounded-2xl bg-gray-900 p-6 ${shadowClass} transition-all duration-300`}>
+      <div
+        className={`overflow-hidden rounded-2xl bg-gray-900 p-6 ${shadowClass} transition-all duration-300`}
+      >
         <div className="mb-4 flex items-center gap-3 rounded-lg bg-gray-800 px-4 py-3">
           <svg
             className="h-5 w-5 text-gray-400"
@@ -302,7 +303,9 @@ export function TypographyShowcase({ palette, shadowIntensity, onShadowChange }:
       </div>
 
       {/* Card 6: Calendar */}
-      <div className={`overflow-hidden rounded-2xl bg-white p-6 ${shadowClass} transition-all duration-300`}>
+      <div
+        className={`overflow-hidden rounded-2xl bg-white p-6 ${shadowClass} transition-all duration-300`}
+      >
         <div className="mb-4 flex items-center justify-between">
           <h3 className="text-lg font-bold text-gray-900">December 2024</h3>
           <div
@@ -346,7 +349,9 @@ export function TypographyShowcase({ palette, shadowIntensity, onShadowChange }:
       </div>
 
       {/* Card 7: Gradient Text with Shadow Control */}
-      <div className={`overflow-hidden rounded-2xl bg-white p-8 ${shadowClass} transition-all duration-300`}>
+      <div
+        className={`overflow-hidden rounded-2xl bg-white p-8 ${shadowClass} transition-all duration-300`}
+      >
         <div
           className="mb-3 text-4xl font-black"
           style={{
@@ -427,7 +432,9 @@ export function TypographyShowcase({ palette, shadowIntensity, onShadowChange }:
       </div>
 
       {/* Card 9: Size Scale */}
-      <div className={`overflow-hidden rounded-2xl bg-white p-8 ${shadowClass} transition-all duration-300`}>
+      <div
+        className={`overflow-hidden rounded-2xl bg-white p-8 ${shadowClass} transition-all duration-300`}
+      >
         <h3 className="mb-4 text-lg font-bold text-gray-900">Text Sizes</h3>
         <div className="space-y-2">
           <p

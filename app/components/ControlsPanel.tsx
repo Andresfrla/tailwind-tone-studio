@@ -75,7 +75,7 @@ export const ControlsPanel = ({
           </Button>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-r from-white via-white to-slate-50 p-4 shadow-inner shadow-slate-200/70">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-r from-white via-white to-slate-50 p-4 shadow-inner shadow-slate-200/70">
           <div className="flex items-start justify-between gap-2">
             <div className="space-y-1">
               <div className="flex flex-wrap gap-2">

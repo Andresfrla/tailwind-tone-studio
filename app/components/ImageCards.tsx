@@ -39,7 +39,7 @@ export function ImageCards() {
       </div>
 
       {/* Card Style 2: Border Gradient */}
-      <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 p-[2px] transition-all duration-300 hover:p-[3px]">
+      <div className="group relative overflow-hidden rounded-xl bg-linear-to-br from-pink-500 via-purple-500 to-indigo-500 p-[2px] transition-all duration-300 hover:p-[3px]">
         <div className="relative h-full overflow-hidden rounded-xl bg-white">
           <div className="relative h-48 w-full overflow-hidden">
             <Image
@@ -74,7 +74,7 @@ export function ImageCards() {
             fill
             className="object-cover opacity-90 transition-all duration-500 group-hover:opacity-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
         </div>
         <div className="relative p-6 text-white">
           <h3 className="mb-2 text-lg font-bold">Glass Morphism</h3>
@@ -91,7 +91,7 @@ export function ImageCards() {
 
       {/* Card Style 4: Minimal with Hover Effect */}
       <div className="group overflow-hidden rounded-xl border-2 border-gray-200 bg-white transition-all duration-300 hover:border-blue-500 hover:-translate-y-1">
-        <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="relative h-48 w-full overflow-hidden bg-linear-to-br from-blue-50 to-indigo-100">
           <Image
             src={images[3]}
             alt="Generated image 4"
@@ -123,7 +123,7 @@ export function ImageCards() {
             fill
             className="object-cover opacity-75 transition-opacity duration-500 group-hover:opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-cyan-500/20 to-purple-500/20"></div>
         </div>
         <div className="p-6">
           <h3 className="mb-2 text-lg font-bold text-white">Neon Effect</h3>
@@ -146,7 +146,7 @@ export function ImageCards() {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
           <h3 className="mb-2 text-xl font-bold">Overlay Text</h3>
           <p className="text-sm text-gray-200">

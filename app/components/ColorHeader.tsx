@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Pill } from "./shared";
 import { Palette, Moon, Sun } from "lucide-react";
 

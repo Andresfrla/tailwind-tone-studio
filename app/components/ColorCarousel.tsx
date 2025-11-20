@@ -161,7 +161,7 @@ export function ColorCarousel() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`group flex-shrink-0 overflow-hidden rounded-lg transition-all duration-300 ${
+              className={`group shrink-0 overflow-hidden rounded-lg transition-all duration-300 ${
                 index === currentIndex
                   ? "ring-4 ring-gray-800 ring-offset-2"
                   : "opacity-60 hover:opacity-100"
